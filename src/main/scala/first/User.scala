@@ -1,3 +1,5 @@
+package first
+
 class User(val id: UserId, val name: UserName) {
 
   def canEqual(other: Any): Boolean = other.isInstanceOf[User]
@@ -8,4 +10,15 @@ class User(val id: UserId, val name: UserName) {
   }
 
   override def hashCode(): Int = 31 * id.##
+}
+
+object User {
+
+  /**
+   * 新規ユーザーを生成する
+   *
+   * @note ここではID生成方法は主眼ではないので、固定値で返している。
+   * @param name ユーザー名
+   */
+  def create(name: String): User = new User(UserId(-1L), UserName(name))
 }
