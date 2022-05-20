@@ -1,7 +1,8 @@
 package usecase
 
 import ddd.Output
-import user.{User, UserName}
+import sample1.User
+import user.UserName
 
 sealed abstract class CreateUserOutput extends Output
 object CreateUserOutput {

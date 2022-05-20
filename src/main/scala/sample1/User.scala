@@ -1,4 +1,6 @@
-package user
+package sample1
+
+import user.{UserId, UserName}
 
 class User(val id: UserId, val name: UserName) {
 
