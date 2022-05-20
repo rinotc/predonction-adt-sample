@@ -1,6 +1,7 @@
 package first
 
 import ddd.DomainService
+import user.User
 
 /**
  * ユーザーのドメインサービス

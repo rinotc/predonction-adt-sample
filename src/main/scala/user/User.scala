@@ -1,4 +1,4 @@
-package first
+package user
 
 class User(val id: UserId, val name: UserName) {
 

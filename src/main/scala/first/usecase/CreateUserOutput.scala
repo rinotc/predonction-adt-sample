@@ -1,7 +1,7 @@
 package first.usecase
 
 import ddd.Output
-import first.{User, UserName}
+import user.{User, UserName}
 
 sealed abstract class CreateUserOutput extends Output
 object CreateUserOutput {

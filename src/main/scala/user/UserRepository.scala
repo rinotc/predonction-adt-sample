@@ -1,4 +1,4 @@
-package first
+package user
 
 trait UserRepository {
 
