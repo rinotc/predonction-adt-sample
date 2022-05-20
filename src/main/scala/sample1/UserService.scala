@@ -1,4 +1,4 @@
-package first
+package sample1
 
 import ddd.DomainService
 import user.User

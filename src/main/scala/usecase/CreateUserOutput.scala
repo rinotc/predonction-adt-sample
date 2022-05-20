@@ -1,4 +1,4 @@
-package first.usecase
+package usecase
 
 import ddd.Output
 import user.{User, UserName}

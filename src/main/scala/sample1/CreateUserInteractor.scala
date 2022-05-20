@@ -1,6 +1,6 @@
-package first
+package sample1
 
-import first.usecase.{CreateUserInput, CreateUserOutput, CreateUserUseCase}
+import usecase.{CreateUserInput, CreateUserOutput, CreateUserUseCase}
 import user.{User, UserRepository}
 
 final class CreateUserInteractor(userService: UserService, userRepository: UserRepository) extends CreateUserUseCase {
