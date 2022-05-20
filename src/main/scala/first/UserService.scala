@@ -1,15 +1,16 @@
 package first
 
+import ddd.DomainService
+
 /**
  * ユーザーのドメインサービス
  */
-trait UserService {
+trait UserService extends DomainService {
 
   /**
-   * ユーザー名が重複してないかを確認する
+   * DBに問い合わせをして、ユーザー名が重複してないかを確認する
    *
    * @param user ユーザー
-   * @return ユーザー名が重複した場合 `true`
    */
   def exists(user: User): Either[UserNameDuplicateError, Unit]
 }

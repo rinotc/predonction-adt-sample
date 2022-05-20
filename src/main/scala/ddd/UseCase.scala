@@ -9,6 +9,16 @@ package ddd
  *
  * このユースケースはDDDの実装パターンではApplicationServiceに対応する。
  *
+ * @example {{{
+ * abstract SampleUseCase extends UseCase[SampleInput, SampleOutput]
+ *
+ * class SampleInteractor extends SampleUseCase {
+ *   override def handle(input: SampleInput): SampleOutput = {
+ *     // 具体的なフローの実装
+ *   }
+ * }
+ * }}}
+ *
  * @tparam TInput  入力
  * @tparam TOutput 出力
  */

@@ -1,6 +1,6 @@
 package ddd
 
 /**
- * ドメインサービスであることを示すマーカートレイト
+ * DDDのドメインサービスであることを示すマーカートレイト
  */
 trait DomainService
