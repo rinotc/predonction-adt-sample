@@ -1,4 +1,4 @@
-package sample1
+package user
 
 /**
  * ユーザーのドメインに関するエラー

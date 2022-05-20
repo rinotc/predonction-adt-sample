@@ -1,6 +1,8 @@
 package sample2
 
+import user.UserNameDuplicateError
+
 trait UserNameConflictValidator {
 
-  def validate(user: User[NotValid]): Either[String, User[Valid]]
+  def validate(user: User[_]): Either[UserNameDuplicateError, Unit]
 }

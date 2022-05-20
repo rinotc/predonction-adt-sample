@@ -1,5 +1,5 @@
-package usecase
+package usecase.create
 
-import ddd.{Input, Output}
+import ddd.Input
 
 final case class CreateUserInput(name: String) extends Input[CreateUserOutput]

@@ -1,4 +1,4 @@
-package usecase
+package usecase.create
 
 import ddd.Output
 import sample1.User

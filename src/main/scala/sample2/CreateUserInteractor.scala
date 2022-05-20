@@ -1,8 +1,20 @@
 package sample2
 
-import usecase.{CreateUserInput, CreateUserOutput, CreateUserUseCase}
+import usecase.create.CreateUserOutput.UserNameConflict
+import usecase.create.{CreateUserInput, CreateUserOutput, CreateUserUseCase}
 
-class CreateUserInteractor extends CreateUserUseCase {
+class CreateUserInteractor(
+    userNameConflictValidator: UserNameConflictValidator,
+    userRepository: UserRepository
+) extends CreateUserUseCase {
 
-  override def handle(input: CreateUserInput): CreateUserOutput = ???
+  override def handle(input: CreateUserInput): CreateUserOutput = {
+    val newUser: User[NotValid] = User.create(input.name)
+
+    newUser.validate(userNameConflictValidator) match {
+      case Left(_) => UserNameConflict(newUser.name)
+      case Right(validUser) =>
+        userRepository.insert(validUser)
+    }
+  }
 }
